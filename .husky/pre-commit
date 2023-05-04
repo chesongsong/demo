@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 拉取远端所有代码，不合并
+git fetch origin  
+# 获取本地分支和远端 dev 分支的最新公共提交
+commit=$(git merge-base HEAD origin/dev)
+if [ -n "$(git log $commit..origin/dev)" ]; then
+  echo "\033[32mcommitID: $commit \033[0m"
+  echo  "\033[31m请先将远程 dev 分支合并到本地分支\033[0m"
+  exit 1
+fi
