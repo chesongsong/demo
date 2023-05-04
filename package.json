@@ -1,0 +1,23 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chesongsong/demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chesongsong/demo/issues"
+  },
+  "homepage": "https://github.com/chesongsong/demo#readme",
+  "dependencies": {
+    "husky": "^8.0.3"
+  }
+}
