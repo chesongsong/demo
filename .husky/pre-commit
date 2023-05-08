@@ -3,8 +3,8 @@
 # 拉取远端所有代码，不合并
 git fetch origin  
 # 获取本地分支和远端 master 分支的最新公共提交
-commit=$(git merge-base HEAD origin/master)
-if [ -n "$(git log $commit..origin/master)" ]; then
+commit=$(git merge-base HEAD origin/dev)
+if [ -n "$(git log $commit..origin/dev)" ]; then
   if [[ "$OSTYPE" == "darwin"* ]]; then
     osascript -e 'display alert "提交失败" message "请先将远程 master 分支合并到本地分支，commitID: '$commit'" as warning'
   elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
