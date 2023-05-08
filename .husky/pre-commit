@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-
+echo '----'
 # 拉取远端所有代码，不合并
 git fetch origin  
 # 获取本地分支和远端 dev 分支的最新公共提交
